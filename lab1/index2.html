@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+  <style>
+      h2{
+          color: red;
+      }
+  </style>
+</head>
+<body>
+    <input type="text" id="txtInput" value="33691E">
+    <h3>Input text</h3>
+    <script>
+      const h3Text = document.querySelector("h3");
+      const txtInput = document.querySelector("#txtInput");
+      txtInput.onkeyup = () => {
+          h3Text.innerHTML = txtInput.value;
+      }
+    </script>
+    <div id="targets">
+
+    </div>
+    <script>
+       const targets  = document.querySelector.bind(document);
+        
+            const h2 = document.createElement('h2');
+            h2.innerHTML = 'Hello Polytichnic';
+            targets('#targets').appendChild(h2); 
+
+
+       
+     
+    </script>
+</body>
+</html>

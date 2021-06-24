@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #target{
+            width: 60px;
+            height: 60px;
+            background-color: #33691E;
+        }
+    </style>
+</head>
+<body>
+    <div id="target"></div>
+    <script>
+     var tagert = document.querySelector("#target");
+     tagert.onmouseover = function(){
+         tagert.style.background = '#BF360C';
+     }
+     tagert.onmouseout = function(){
+         tagert.style.background = '#33691E';
+        } 
+    </script>
+</body>
+</html>

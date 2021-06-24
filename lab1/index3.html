@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul id="targets"> </ul>
+    <script>
+        const users = [
+            {id: 1 , name: 'James Smith ' , gender: 1},
+            {id: 2 , name: 'Isla Brown' , gender: 2},
+            {id: 3 , name: 'Amelia Davies' , gender: 2},
+            {id: 4 , name: 'Jacob Evans' , gender: 1},
+        ];
+        const target = document.querySelector.bind(document);
+          
+        target('#targets').innerHTML= users.map((item) =>{
+            return `<li class="user_item">${item.id} - ${item.name} - ${item.gender}</li>`;
+        }).join(" ");
+    </script>
+
+</body>
+</html>

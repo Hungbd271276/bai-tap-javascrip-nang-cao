@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="moment.min.js"></script>
+</head>
+<body>
+    <div class="form">
+        <div>
+            <label for="">Date</label>
+            <input type="text" id="dt">
+        </div>
+        <div>
+          <label for="">Month</label>
+          <input type="text" id="mot">
+      </div>
+      <div>
+          <label for="">Year</label>
+          <input type="text" id="ye">
+      </div>
+      <div>
+          <input type="submit" value="Convert" id="addclick">
+      </div>
+      </div>
+      <h3 id="one1"></h3>
+      <h3 id="one2"></h3>
+    <script>
+     const add = document.querySelector.bind(document);
+     add('#addclick').addEventListener('click', (e) =>{
+        const dta = add('#dt').value;
+        const moth = add('#mot').value;
+        const yed = add('#ye').value;
+      
+         add('#one1').innerHTML = dta + "-" + moth + "-" + yed; 
+         const d = moment().date(Number);
+         add('#one2').innerHTML = d;
+         d.format("dddd");
+     }) ;
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function van_dong_vien(ma_van_dong_vien , ho_va_ten, ngay_sinh, giai_thuong){
+            this.ma_van_dong_vien =  ma_van_dong_vien;
+            this.ho_va_ten = ho_va_ten,
+            this.ngay_sinh = ngay_sinh,
+            this.giai_thuong = giai_thuong,
+            this.run = function(){
+                console.log(this.ho_va_ten + " Đang chạy running ");
+            }
+        }
+        function chay(ma_van_dong_vien , ho_va_ten, ngay_sinh, giai_thuong){
+         van_dong_vien.call(this, ma_van_dong_vien , ho_va_ten, ngay_sinh , giai_thuong);
+
+        }
+        let running = new chay('ph10926' , 'Bùi Đức Hùng' , '14/8/2001', 'cúp vàng');
+        console.log(running);
+        running.run();
+    </script>
+</body>
+</html>

@@ -1,0 +1,190 @@
+<!-- <!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // finter
+        //    let comminicate = document.getElementById('onchange1');
+        //    const arr = [12 , 32 , 34 , 50];
+        //      const checkout = (age) => {
+        //          return age >= document.getElementById('onchange').value;
+
+        //      }
+        //    comminicate.addEventListener('click', function(){
+        //     document.getElementById('demo').innerHTML = arr.filter(checkout); 
+        //    });
+        // map
+        // sqrt array
+          const arrays = [4 , 9 , 16 , 25];
+         console.log(arrays.map(Math.sqrt));  
+    </script> -->
+     <!-- <div id="content"></div>
+
+     
+     <script>
+         const arrs = [4, 8, 12, 18];
+         const maps = arrs.map(Myfunction);
+         function Myfunction(num){
+              return num * 2;
+         }
+         document.getElementById('content').innerHTML = maps; 
+     </script>   -->
+    <!-- <div id="eyse"></div>
+<script>
+        var concats = [
+         {id: 1 , name: 'Hùng đẹp trai du baj' , hometow: 'Hà nội'},
+         {id: 2 , name: 'Hùng số 2 không ai là số một' , hometow: 'Hà nội 2'},
+         ];
+        const quakas = concats.map(Myfunctions);
+        function Myfunctions(item){
+            const arrays = [item.id , item.name + '</br>'];
+            return arrays;
+        }
+         document.getElementById('eyse').innerHTML = quakas;        
+
+</script> -->
+<!-- <div id="const">
+
+</div>
+     <script>
+        // //  // forEach
+        // //  const fruit = ["apple", "orange", "cherry"];
+        // //      fruit.forEach(Myfunctions);
+           
+        // //    function Myfunctions (index,item){
+        // //         document.getElementById('const').innerHTML += item + ":" + index + "</br>";
+        //     }  
+        let sum = 0;
+        let arrays = [65, 44, 12, 4];
+       
+        arrays.forEach(Myfunctions);
+
+        function Myfunctions(item){
+           sum += item;
+           document.getElementById('const').innerHTML = sum;
+        }
+     </script>
+
+</body>
+</html>
+    </script>
+</body>
+</html> --> 
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+         addName:before {
+       content: 'haha';
+   }
+   #replaced {
+  content: url("https://mdn.mozillademos.org/files/12668/MDN.svg");
+}
+
+#replaced::after { /* will not show if element replacement is supported */
+  content: " (" attr(id) ")";
+}
+    </style>
+</head>
+<body>
+    <div id="replaced">Mozilla</div>
+      <script>
+    //       var alert = {
+    //           idCard: 124344566,
+    //           name: 'Hùng Bùi',
+    //           age: 19,
+    //           childs: [
+    //             {
+    //                 name: "James Smith",
+    //                 age: 19
+    //             },
+    //             {
+    //                 name: "James Marsh",
+    //                 age: 19
+    //             }
+    //           ],
+    //         byHors: function(){
+    //             console.log('Bao giờ mới thành thạo được javascript để hổ mọc tung cánh');
+    //         }
+    //       }
+    //      console.log(alert.name);  
+    //  //   console.log(alert.childs);
+    //     alert.age = 48;
+    //      newchild = {name: "Nguyễn Thanh Hùng" , age: 120};
+    //      alert.childs.push(newchild);
+    //      console.log(alert.childs);
+    //     console.log(alert.age);
+    //    alert.byHors();
+       
+        // tạo đối tượng contractor
+        //  function Animal(name , age , gender){
+        //      this.name = name;
+        //      this.age = age;
+        //      this.gender = gender;
+             
+        //      this.run = function(){
+        //          console.log(this.name + ' walk running! ');
+        //      }
+        //  }    
+        //   function Cat(name , age , gender , hairColor){
+        //       Animal.call(this , name , age , gender);
+        //       this.hairColor = hairColor;
+        //   }
+
+        //    var doraemon = new Cat("hùng" , 19 , "famale" , "black");
+        //    console.log(doraemon); 
+        //    doraemon.run();
+
+        function Student(name , age){
+            this.name = name;
+            this.age = age;
+        }
+
+        var s1 = new Student('hùng' , 19);
+        //  Student.sayhello = function(){
+        //      console.log('Hùng đẹp trai dubaj');
+        //  }
+        //  s1.sayhello();
+         
+        // khắc phục giải pháp
+          Student.prototype.sayhello = function(){
+              console.log('I am ' + this.name + " I " + this.age);
+          } 
+          s1.sayhello();
+
+          var PeopleTo = {
+              name: "DANG QUANG DUC",
+              age: 2,
+              showInfo: function(){
+                  return "cháu tên là: " + this.name + " cháu " + this.age + " tuổi";
+              }
+          }
+
+          var quangduc = {
+              __proto__: PeopleTo
+          }
+          var tranganh = {
+              __proto__: PeopleTo
+          }
+
+          console.log(quangduc.showInfo());
+          console.log(tranganh.showInfo());
+        
+      </script>
+
+      <div id="Mydiv" data-name="Hùng" , data-started = "19">Mydiv</div>
+      <script>
+          const addName = document.querySelector("#Mydiv");
+  
+          console.log(addName.dataset);
+      </script>
+</body>
+</html>

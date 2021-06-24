@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="input">
+    <button type="button" id="check">Check</button>
+    <br>
+    <h2>Chuỗi đảo ngược: <span id="output"></span></h2>
+    <h2>Kết quả chuỗi vừa nhập: <span id="result"></span></h2>
+    <script>
+        // Các hàm xử lý chuỗi
+       
+        // 1: length - tả về độ dài chuỗi
+        //  var str = "Cao đẳng thực hành FPT Polytechnic";
+        //  console.log(str.length);
+         
+        // 2: indexOf - tìm ký tự nếu ko tìm thấy sẽ trả về -1
+        //   var str = "Cao đẳng thực hành FPT Polytechnic";
+        //   console.log(str.indexOf("FPT"));
+
+        // 3: lastIndexOf() - tương tự như  indexOf trả về vị trí cuối cùng ko tìm thấy sẽ trả về -1
+        // var str = "Cao đẳng thực hành FPT Polytechnic";
+        // var stt = ("FPT");
+        // console.log(str.lastIndexOf(stt));
+
+        // 4: search() - có tác dụng như indexOf tìm kiếm thông qua biểu thức chính quy
+        //  var str = "Cao đẳng thực hành FPT Polytechnic";
+        //  console.log(str.search("FPT"));
+
+        // 5: slice - trả về 1 chuỗi cắt ra từ chuỗi gốc nếu star > stop sẽ tra về phương thức sẽ trả về chuỗi rỗng
+        // var str = "Cao đẳng thực hành FPT Polytechnic";
+        // console.log(str.slice(19,22));
+
+        // 6: giống slice tuy nhiên star > stop thì 2 tham số sẽ cháo đổi nhau
+        // var str = "Cao đẳng thực hành FPT Polytechnic";
+        // console.log(str);
+        // console.log(str.substring(19 , 22));
+        
+        // 7: substr()
+        // var str = "Cao đẳng thực hành FPT Polytechnic";
+        // console.log(str);
+        // console.log(str.substr(19 , 22));
+
+        //8: toUpperCase() - chuyển đổi in thường thành in hoa
+        // var str = "Cao đẳng thực hành FPT Polytechnic";
+        // console.log(str.toUpperCase());
+
+        // 9: toLowerCase() - chuyển đổi in hoa thàng thường
+        // var str = "CAO ĐẲNG THỰC HÀNH FPT POLYTECHNIC";
+        // console.log(str.toLowerCase());
+        
+        // 9 : trim() - loại bỏ các kí tự khoảng trắng
+        // var str = "          CAO ĐẲNG THỰC HÀNH FPT POLYTECHNIC";
+        // console.log(str.length);
+        // var ttt = str.trim();
+        // console.log(ttt.length);
+
+        // 10: replace() - tìm kiếm chuỗi rồi thay thế
+        // var str = "Cao thực hành FPT Polytechnic";
+        // console.log(str);
+        // console.log(str.replace("Cao " , "Đại học "));
+        
+        // 11 : split() - chuyển 1 chuỗi thành mảng
+        // var str = "Cao thực hành FPT Polytechnic";
+        // console.log(str.split(" "));
+
+        // 12: concat() - nối 2 chuỗi lại với nhau
+        // var str = " Cao thực hành FPT Polytechnic";
+        // var str1 = " Cao thực hành FPT Polytechnic ";
+        // console.log(str.concat(str1));
+          
+        var input = document.querySelector("#input")
+        var btncheck = document.querySelector("#check")
+        var outspan = document.querySelector("#output")
+        var resultspan = document.querySelector("#result")
+        
+         btncheck.addEventListener('click' , function(){
+             var InputValue = input.value;
+             if(InputValue !== ""){
+              // chuyển giá trị input về mảng
+              var str2 = InputValue.split("");
+              // dảo ngược mảng
+            var reverser = str2.reverse();
+             // ghép mảng lại thành chuỗi
+             var outValue = reverser.join("");
+             outspan.innerHTML = outValue;
+            // kiểm tra giá trị chuỗi gốc và chuỗi sau đảo ngược
+            if(outValue === InputValue){
+                resultspan.innerText = "Là chuỗi Palinedrome";
+            }else{
+                resultspan.innerText = "Không phải là chuỗi Palinedrome";
+            }
+             }
+         });
+            
+         // II Biểu thức chính quy
+          // biểu thức chính quy thuần
+        //   var patt = /poly/;
+        //   var result = patt.test('Cao đẳng thực hành fpt polytechnic');
+        //   console.log(result);
+
+         var patt = /^fpt/m;
+         var result = patt.test("fpt polytechnic");
+         console.log(result);
+    </script> 
+</body>
+</html>

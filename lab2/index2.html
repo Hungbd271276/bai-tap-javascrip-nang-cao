@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="name">String</label>
+    <input type="text" name="abc" id="input"><br>
+    <label for="name">Number</label>
+    <input type="text" name="abc" id="input1"><br>
+    <button type="submit" id="hihi">Add</button>
+    <h1 id="h"></h1>
+    <script>
+        var submit = document.querySelector("#hihi");
+        submit.addEventListener('click' , function(){
+           var hp = document.querySelector("#h");
+           var inputs = document.querySelector("#input");
+           var inputs1 = document.querySelector("#input1");        
+              var abc = inputs.value; 
+                 hp.innerHTML = abc.substr(inputs1.value);              
+             
+        });
+    </script>
+</body>
+</html>

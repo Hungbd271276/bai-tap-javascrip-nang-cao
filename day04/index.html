@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        setTimeout(function(){
+            console.log('haha');
+        } , 5000);
+        console.log('one');
+
+        setTimeout(function(){
+       console.log('hihi');
+        }, 10000);
+        console.log("two");
+
+        // định nghĩa hàm xử lý
+        function getNameCallback(yourname){
+            alert("Hello " + yourname);
+        }
+        // định nghĩa hàm nhận callback
+        function testFunction(callback){
+            if(callback) callback();
+        }
+        var name = 'Bùi Đức Hùng';
+         // gọi hàm getNameCallback là một tham số
+        testFunction(getNameCallback(name));
+    </script>
+</body>
+</html>
